@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">APNotepad</string>
+    <string name="no_items_to_display">No items to display…</string>
+    <string name="create_notes_and_folders">Create notes and folders using the menu at the top.</string>
+    <string name="add_note_plaintext">Add Note</string>
+    <string name="add_note_checklist">Add Checklist</string>
+    <string name="add_folder">Add Folder</string>
+    <string name="folder_name_hint">Folder name</string>
+    <string name="note_text_hint">Note text…</string>
+    <string name="add_checklist_item_hint">Add checklist item</string>
+    <string name="note_title_hint">Note title</string>
+    <string name="item_hint">Item</string>
+    <string name="create_checklist_item">Add items to this checklist using the button at the bottom.</string>
+    <string name="import_notes">Import</string>
+    <string name="export_notes">Export</string>
+</resources>

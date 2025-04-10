@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    tools:context=".MainActivity">
+
+    <cafe.adriel.krumbsview.KrumbsView
+        android:id="@+id/breadcrumbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:krumbsPaddingStartItem="8dp"
+        app:krumbsStartItem="Home"
+        app:krumbsTextSize="24sp"
+        app:krumbsCurrentItemTextColor="@color/light_blue_accent"
+        app:krumbsPreviousItemTextColor="@color/light_blue_accent"
+        app:krumbsSeparatorTintColor="@color/light_blue_accent"
+        app:krumbsAnimationType="fadeInOut"
+        app:krumbsAnimationDuration="longDuration"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/breadcrumbs">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/folderItemsPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/noFolderItems"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/no_items_to_display"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/noFolderItemsHint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="0.5" />
+
+            <TextView
+                android:id="@+id/noFolderItemsHint"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center|top"
+                android:text="@string/create_notes_and_folders"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/noFolderItems"
+                app:layout_constraintVertical_weight="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/folderItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
