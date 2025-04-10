@@ -14,6 +14,12 @@ Note-taking app for Android with customizable **Emoji icons for notes** and fold
 - Android Studio project root: [android/APNotepad/](./android/APNotepad/)
 - Main srouce files: [android/APNotepad/app/src/main/java/dk/sdu/ap/apnotepad/](./android/APNotepad/app/src/main/java/dk/sdu/ap/apnotepad/)
 
+## How to Run
+
+1. Open the APNotepad project in Android Studio
+2. Run Gradle sync
+3. Run 'app' (default run configuration)
+
 ## Screenshots
 
 ![Screenshot of the APNotepad app](./res/readme/screenshots-1.png)
